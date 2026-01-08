@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Todo from "./components/Todo.jsx";
+import TodoTitle from "./components/TodoTitle.jsx";
+import Popup from "./components/Popup.jsx"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <h1>Hello World</h1>
-     <h2>ASAP HTML is the Best</h2>
+      <TodoTitle/>
+      <Todo task="Learn React"/>
+      <Todo task="Finish ASAP Frontend"/>
+      <Todo task="Land a junior job"/>
+      <Todo task="Earn $100+"/>
+      {/* <Popup /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
