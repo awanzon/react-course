@@ -1,13 +1,32 @@
-import { useState } from "react"
+import { useState } from "react";
+let initialUser = { name: "Awan", age: 24 }
 function Counter() {
-  const [count, setCount] = useState(0)
+  const [user, setCount] = useState(initialUser);
 
   return (
     <div>
-      <h1>Counter:{count}</h1>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-      <button onClick={() => setCount(0)}>Reset</button>
+      <h1>
+        Counter:{user.age} {user.name}
+      </h1>
+      <button
+        onClick={() => {
+          setCount((prevUser) => ({ ...prevUser, age: prevUser.age + 1 }));
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          setCount((prevUser) => ({ ...prevUser, age: prevUser.age - 1 }));
+        }}
+      >
+        Decrement
+      </button>
+      <button
+        onClick={() => setCount(initialUser)}
+      >
+        Reset
+      </button>
     </div>
   );
 }

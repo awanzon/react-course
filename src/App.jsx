@@ -1,5 +1,4 @@
 import "./App.css";
-import { useState } from "react";
 import Todo from "./components/Todo.jsx";
 import TodoTitle from "./components/TodoTitle.jsx";
 import Popup from "./components/Popup.jsx";
