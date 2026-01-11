@@ -1,15 +1,16 @@
-function Todo({task, description}) {
+function Todo({task, description, togglePopup}) {
   function deleteHandler() {
-    console.log("Delete", task);
+    console.log("Delete", task[0]);
     
   }
 
   return (
     <div className="todo-item">
-      Todo Item
-      <h2>{task}</h2>
+      <button onClick={() => togglePopup()}>
+        <h3>{task}</h3>
+      </button>
       <p>{description}</p>
-      <button onClick={() => deleteHandler(true)}>Delete</button>
+      <button onClick={() => togglePopup()}>Delete</button>
     </div>
   );
 }
