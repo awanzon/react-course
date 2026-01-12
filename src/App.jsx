@@ -5,6 +5,7 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Posts from "./pages/Posts.jsx";
 import Nav from "./components/Nav.jsx";
+import Users from "./pages/Users.jsx";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/posts" element={<Posts />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="/users/:userName" element={<Users />}/>
       </Routes>
       <div></div>
     </Router>

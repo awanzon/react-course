@@ -6,6 +6,9 @@ function Nav() {
     <Link to="/about">About</Link>
     <Link to="/contact">Contact</Link>
     <Link to="/posts">Posts</Link>
+    <Link to="/users/mrbeast">Mr Beast</Link>
+    <Link to="/users/kyliejenner">Kylie Jenner</Link>
+    <Link to="/users/imancodes">Iman Codes</Link>
   </nav>
   );
 }
