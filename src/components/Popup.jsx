@@ -25,3 +25,5 @@ function Popup({ question, onClose }) {
 }
 
 export default Popup;
+
+// this is pop up component when you clicked a button.
