@@ -17,7 +17,7 @@ function App() {
         <Route path="/posts" element={<Posts />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />}/>
-        <Route path="/users/:userName" element={<Users />}/>
+        <Route path="/users/:id" element={<Users />}/>
       </Routes>
       <div></div>
     </Router>

@@ -1,16 +1,30 @@
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Users() {
-  const {userName} = useParams()
+  const { id } = useParams()
+  const [user, setUser] = useState({})
+  async function fetchUserData() {
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+
+    setUser(data);
+    
+  }
+
 
   useEffect(() => {
-    fetch(`https://tiktok.api.com/${userName}`)
+    fetchUserData();
   }, [])
-  console.log("reloaded pal");
+  
   
   return (
-    <div>{userName}</div>
+    <div>
+      <Link to="/">Back to home</Link>
+      <h1>{user.id}</h1>
+      <h1>{user.name}</h1>
+      <h1>{user.username}</h1>
+    </div>
   )
 }
 
